@@ -1,0 +1,23 @@
+
+name: ❓ Question / Request
+description: Ask about pricing, integrations, or general queries
+title: "[QUESTION]: "
+labels: ["question","P3"]
+body:
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      placeholder: Please provide context
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - integration
+        - pricing
+        - refund
+        - verification
+        - other

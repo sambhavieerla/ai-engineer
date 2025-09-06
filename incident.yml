@@ -1,0 +1,38 @@
+
+name: 🐛 Incident / Bug
+description: Report an incident, downtime, or access issue
+title: "[INCIDENT]: "
+labels: ["incident", "P1"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened? Include error messages and impact.
+      placeholder: Our servers are down, users cannot log in...
+    validations:
+      required: true
+  - type: input
+    id: sender
+    attributes:
+      label: Reporter Email
+      placeholder: name@company.com
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - downtime
+        - login_issue
+        - billing_error
+        - verification
+        - integration
+        - other
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - P1
+        - P2
+        - P3
